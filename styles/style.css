@@ -1,38 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
-.banner {
-  width: 100vw;
-  height: 635px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(40, 42, 36, 0.5)), color-stop(27.62%, rgba(40, 42, 36, 0))), -webkit-gradient(linear, left bottom, left top, from(rgba(40, 42, 36, 0.2)), to(rgba(40, 42, 36, 0.2))), url(../assets/banner.jpg);
-  background-image: linear-gradient(180deg, rgba(40, 42, 36, 0.5) 0%, rgba(40, 42, 36, 0) 27.62%), linear-gradient(0deg, rgba(40, 42, 36, 0.2), rgba(40, 42, 36, 0.2)), url(../assets/banner.jpg);
-  background-position: center;
-  background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: absolute;
+.menu-parent {
+  position: fixed;
   top: 0;
-  z-index: -1;
-}
-
-.banner .title {
-  text-align: center;
-  font-family: "Lato", sans-serif;
-  color: #fff;
-}
-
-.banner .title h1 {
-  font-size: 110px;
-}
-
-.banner .title p {
-  font-size: 32px;
+  margin: auto;
+  width: 100%;
 }
 
 .menu {
@@ -97,11 +68,28 @@
             transform: translate(-5%, -5px);
     z-index: 2;
   }
-  .line {
+  .hamburger .line {
     width: 30px;
     height: 3px;
-    background: red;
+    background: #fff;
     margin: 5px;
+    -webkit-transition: opacity 0s linear, -webkit-transform 350ms ease-in-out;
+    transition: opacity 0s linear, -webkit-transform 350ms ease-in-out;
+    transition: transform 350ms ease-in-out, opacity 0s linear;
+    transition: transform 350ms ease-in-out, opacity 0s linear, -webkit-transform 350ms ease-in-out;
+  }
+  .hamburger .open.line:nth-child(2) {
+    background: #1b1947;
+    -webkit-transform: rotate(45deg) translate(5px);
+            transform: rotate(45deg) translate(5px);
+  }
+  .hamburger .open.line:nth-child(3) {
+    background: #1b1947;
+    -webkit-transform: rotate(135deg) translate(-6px);
+            transform: rotate(135deg) translate(-6px);
+  }
+  .hamburger .open.line:nth-child(1) {
+    opacity: 0;
   }
   .nav-links {
     position: fixed;
@@ -159,5 +147,43 @@
     -webkit-clip-path: circle(1350px at 90% -10%);
     background-color: #ebe772 !important;
   }
+}
+
+.main .content-image {
+  background-image: url(../assets/grid.jpg);
+}
+
+.banner {
+  width: 100vw;
+  height: 60vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(40, 42, 36, 0.5)), color-stop(27.62%, rgba(40, 42, 36, 0))), -webkit-gradient(linear, left bottom, left top, from(rgba(40, 42, 36, 0.2)), to(rgba(40, 42, 36, 0.2))), url(../assets/banner.jpg);
+  background-image: linear-gradient(180deg, rgba(40, 42, 36, 0.5) 0%, rgba(40, 42, 36, 0) 27.62%), linear-gradient(0deg, rgba(40, 42, 36, 0.2), rgba(40, 42, 36, 0.2)), url(../assets/banner.jpg);
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: -1;
+}
+
+.banner .title {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  color: #fff;
+}
+
+.banner .title h1 {
+  font-size: 110px;
+}
+
+.banner .title p {
+  font-size: 32px;
 }
 /*# sourceMappingURL=style.css.map */
