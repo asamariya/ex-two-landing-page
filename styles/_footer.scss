@@ -1,0 +1,16 @@
+footer {
+  background: linear-gradient(0deg, #1b1947, #1b1947), url(../assets/grid.jpg);
+  padding: 40px 64px;
+  text-align: center;
+  li {
+    margin-right: 12px;
+    display: inline;
+    a {
+      text-decoration: none;
+      color: $white;
+      font-family: $text;
+      font-size: 16px;
+      line-height: 23px;
+    }
+  }
+}

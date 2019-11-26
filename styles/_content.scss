@@ -1,25 +1,43 @@
-.main {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  .content-text {
-    background: #ebe772;
-    color: $black;
-    font-family: $text;
-    display: flex;
-    align-items: center;
-    // text-align: center;
-    height: 450px;
-    padding-left: 3rem;
-    padding-right: 4rem;
-    h3 {
-      font-size: 3rem;
-      font-weight: 700;
-    }
+.content-text {
+  background: #ebe772;
+  color: $black;
+  font-family: $text;
+  display: flex;
+  align-items: center;
+  padding: 5rem 6rem 5rem 3rem;
+  line-height: 3.5em;
+  h3 {
+    font-size: 3rem;
+    font-weight: 700;
   }
-  .content-image {
-    background-image: url(../assets/grid.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 450px;
+}
+
+.content-image {
+  background-image: url(../assets/grid.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 400px;
+}
+
+//Tablet
+@media only screen and (min-width: 768px) {
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .col-1-2 {
+    width: 50%;
+  }
+}
+
+//Desktop
+@media only screen and (min-width: 960px) {
+  .content-text {
+    padding: 8rem 16rem 8rem 3rem;
+    h3 {
+      font-size: 72px;
+      line-height: 108%;
+    }
   }
 }
