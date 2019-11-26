@@ -1,6 +1,6 @@
 footer {
   background: linear-gradient(0deg, #1b1947, #1b1947), url(../assets/grid.jpg);
-  padding: 40px 64px;
+  padding: 24px 32px;
   text-align: center;
   li {
     margin-right: 12px;
@@ -9,8 +9,24 @@ footer {
       text-decoration: none;
       color: $white;
       font-family: $text;
-      font-size: 16px;
-      line-height: 23px;
+      font-size: 12px;
+      line-height: 20px;
+      &:hover {
+        padding-bottom: 4px;
+        border-bottom: 1px solid $white;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    padding: 40px 64px;
+    li {
+      a {
+        font-size: 16px;
+        line-height: 23px;
+      }
     }
   }
 }

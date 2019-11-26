@@ -1,0 +1,71 @@
+// utitlities
+
+.main {
+  .content-text {
+    background: $yellow;
+    color: $black;
+    font-family: $text;
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+    line-height: 1.3;
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      // }
+    }
+  }
+  .content-image {
+    background-image: url(../assets/grid.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 260px;
+  }
+}
+
+//Tablet
+@media only screen and (min-width: 768px) {
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+    .col-1-2 {
+      width: 50%;
+    }
+    .content-text {
+      padding: 5rem 3rem;
+      h3 {
+        font-size: 3rem;
+        line-height: 108%;
+      }
+    }
+    .content-image {
+      background-position: 80% 50%;
+    }
+  }
+}
+
+//Desktop
+@media only screen and (min-width: 960px) {
+  .main {
+    .content-text {
+      padding: 4rem 4rem 4rem 3rem;
+      h3 {
+        font-size: 4rem;
+        line-height: 108%;
+      }
+    }
+  }
+}
+
+// Extra wide
+@media only screen and (min-width: 1376px) {
+  .main {
+    .content-text {
+      padding: 8rem 14rem 8rem 3rem;
+      h3 {
+        font-size: 72px;
+        line-height: 108%;
+      }
+    }
+  }
+}
