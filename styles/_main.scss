@@ -1,5 +1,4 @@
 // utitlities
-
 .main {
   .content-text {
     background: $yellow;
@@ -12,6 +11,8 @@
     h3 {
       font-size: 1.5rem;
       font-weight: 700;
+      animation: fade-in-right 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      animation-delay: 1s;
       // }
     }
   }

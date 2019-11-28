@@ -171,13 +171,13 @@
       clip-path: circle(1350px at 90% -10%);
       -webkit-clip-path: circle(1350px at 90% -10%);
       background-color: $yellow !important;
-      li:not(:last-child) {
+      li:not(:last-child) a {
         &::after {
           content: '';
           display: block;
           width: 0;
           height: 2px;
-          background: $black;
+          background: $black !important;
           transition: width 0.3s;
         }
         &:hover::after {
