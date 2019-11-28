@@ -33,3 +33,16 @@
     transform: translateY(0);
   }
 }
+
+@keyframes z-index-fade-out {
+  0% {
+    z-index: 0;
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    z-index: -1;
+    transform: translateX(-70px);
+    opacity: 0;
+  }
+}
